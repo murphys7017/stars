@@ -1,0 +1,543 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="msvalidate.01" content="C2F4674BDEBFB53CC6D43D4A806DD025">
+  <meta name="baidu-site-verification" content="adf26b7c81978be1a0a5a0c4348e58b9">
+
+
+<link rel="alternate" type="application/rss+xml" title="Stars" href="https://github.com/murphys7017/stars.git/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Stars" href="https://github.com/murphys7017/stars.git/atom.xml" />
+<link rel="alternate" type="application/json" title="Stars" href="https://github.com/murphys7017/stars.git/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="杂谈" />
+
+
+<link rel="canonical" href="https://github.com/murphys7017/stars.git/2022/08/29/%E9%83%A8%E7%BD%B2Rocket.Chat%20Server%E6%B5%81%E7%A8%8B/">
+
+
+
+  <title>
+Java学习建议 - 杂谈 |
+Aki Polaris = Stars = aki-polarisのstars</title>
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Java学习建议
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2022-08-29 14:16:34">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2022-08-29T14:16:34+08:00">2022-08-29</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Aki Polaris</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipex2cdtbj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciusoyjnj219g0u0x56.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclfdu6exj20zk0m87hw.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciub8ja1j20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhfehz7j20zk0m8u0x.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/note/" itemprop="item" rel="index" title="分类于 杂谈"><span itemprop="name">杂谈</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://github.com/murphys7017/stars.git/2022/08/29/%E9%83%A8%E7%BD%B2Rocket.Chat%20Server%E6%B5%81%E7%A8%8B/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.png">
+    <meta itemprop="name" content="Aki-Polaris">
+    <meta itemprop="description" content="aki-polarisのstars, ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Stars">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>:::warning<br>Snap安装有系统限制<br>:::</p>
+<h2 id="通过-Snap-安装"><a href="#通过-Snap-安装" class="headerlink" title="通过 Snap 安装"></a>通过 Snap 安装</h2><p><strong>这是我的安装流程</strong></p>
+<p>使用snap虽然很方便但不是所有Linux系统都可以的</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">apt-get install snapd</span><br><span class="line">snap install core</span><br><span class="line">snap install rocketchat-server</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">重启窗口</span></span><br><span class="line">systemctl restart snap.rocketchat-server.rocketchat-server.service</span><br><span class="line">systemctl restart snap.rocketchat-server.rocketchat-caddy.service</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">然后通过ip:3000端口访问配置即可</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参考</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9yYWxmLnJlbi91YnVudHUtJUU1JUJGJUFCJUU5JTgwJTlGJUU2JTkwJUFEJUU1JUJCJUJBLXJvY2tldC1jaGF0JUVGJUJDJThDJUU2JThCJUE1JUU2JTlDJTg5JUU4JTg3JUFBJUU1JUI3JUIxJUU3JTlBJTg0JUU1JTlCJUEyJUU5JTk4JTlGJUU1JThEJUIzJUU2JTk3JUI2JUU4JTgxJThBJUU1JUE0JUE5JUU1JUI3JUE1JUU1JTg1JUI3JUVGJUJDJTgxLw==">Ubuntu 快速搭建 Rocket.Chat，拥有自己的团队即时聊天工具！ – PlayerCatboy (ralf.ren)</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9kZXZlbG9wZXIvYXJ0aWNsZS8xNzE5Mjg4">使用snap快速安装RocketChat你的聊天服务器 - 腾讯云开发者社区-腾讯云 (tencent.com)</span></p>
+</blockquote>
+<h2 id="通过docker安装"><a href="#通过docker安装" class="headerlink" title="通过docker安装"></a>通过docker安装</h2><ol start="0">
+<li><p>安装docker和docker-compose</p>
+</li>
+<li><p>创建文件夹目录,略</p>
+</li>
+<li><p>创建或者拉取docker-compose.yml</p>
+</li>
+</ol>
+<blockquote>
+<p><span class="exturl" data-url="aHR0cHM6Ly9yb2NrZXQuY2hhdC9kb2NzL2luc3RhbGxhdGlvbi9kb2NrZXItY29udGFpbmVycy9kb2NrZXItY29tcG9zZS8=">https://rocket.chat/docs/installation/docker-containers/docker-compose/</span></p>
+</blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;2&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">rocketchat:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">rocket.chat:latest</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./uploads:/app/uploads</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">PORT=3000</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">ROOT_URL=http://chat.inumio.com</span> <span class="comment"># 改为你自己的服务器的ip</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MONGO_URL=mongodb://mongo:27017/rocketchat</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MONGO_OPLOG_URL=mongodb://mongo:27017/local</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">Accounts_UseDNSDomainCheck=True</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">mongo</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8818</span><span class="string">:3000</span> <span class="comment"># 容器映射出去的端口，根据自己的需要调整</span></span><br><span class="line">  </span><br><span class="line">  <span class="attr">mongo:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mongo</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">unless-stopped</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">     <span class="bullet">-</span> <span class="string">$PWD/data:/data/db</span></span><br><span class="line">     <span class="bullet">-</span> <span class="string">$PWD/dump:/dump</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">mongod</span> <span class="string">--smallfiles</span> <span class="string">--oplogSize</span> <span class="number">128</span> <span class="string">--replSet</span> <span class="string">rs0</span> <span class="string">--storageEngine=mmapv1</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># this container&#x27;s job is just run the command to initialize the replica set.</span></span><br><span class="line">  <span class="comment"># it will run the command and remove himself (it will not stay running)</span></span><br><span class="line">  <span class="attr">mongo-init-replica:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mongo</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">&#x27;bash -c &quot;for i in `seq 1 30`; do mongo mongo/rocketchat --eval &quot;rs.initiate(&#123; _id: &#x27;</span><span class="string">&#x27;rs0&#x27;</span><span class="string">&#x27;, members: [ &#123; _id: 0, host: &#x27;</span><span class="string">&#x27;localhost:27017&#x27;</span><span class="string">&#x27; &#125; ]&#125;)&quot; &amp;&amp; s=$$? &amp;&amp; break || s=$$?; echo &quot;Tried $$i times. Waiting 5 secs...&quot;; sleep 5; done; (exit $$s)&quot;&#x27;</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">mongo</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>拉取镜像并运行</li>
+</ol>
+<p>这一步下载需要花比较长的时间</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up -d mongo</span><br><span class="line">docker-compose up -d mongo-init-replica</span><br><span class="line">docker-compose up -d rocketchat</span><br></pre></td></tr></table></figure>
+
+
+      <div class="tags">
+          <a href="/tags/%E6%9D%82%E8%B0%88/" rel="tag"><i class="ic i-tag"></i> 杂谈</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2022-08-29 13:00:53" itemprop="dateModified" datetime="2022-08-29T13:00:53+08:00">2022-08-29</time>
+  </span>
+  <span id="2022/08/29/部署Rocket.Chat Server流程/" class="item leancloud_visitors" data-flag-title="Java学习建议" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.jpg" alt="Aki-Polaris 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.jpg" alt="Aki-Polaris 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.jpg" alt="Aki-Polaris 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Aki-Polaris <i class="ic i-at"><em>@</em></i>Stars
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://github.com/murphys7017/stars.git/2022/08/29/%E9%83%A8%E7%BD%B2Rocket.Chat%20Server%E6%B5%81%E7%A8%8B/" title="Java学习建议">https://github.com/murphys7017/stars.git/2022/08/29/部署Rocket.Chat Server流程/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2022/08/29/%E4%BA%BA%E7%B1%BB%E7%BE%A4%E6%98%9F%E9%97%AA%E8%80%80%E4%B9%8B%E6%97%B6/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclxfdlttj20zk0m8npd.jpg" title="类人群星闪耀之时 [合订本 不定期整理]">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 杂谈</span>
+  <h3>类人群星闪耀之时 [合订本 不定期整理]</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E8%BF%87-Snap-%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">通过 Snap 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E8%BF%87docker%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">通过docker安装</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2022/08/29/win%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/" rel="bookmark" title="Windows10&11 美化">Windows10&11 美化</a></li><li><a href="/2022/08/29/SVN%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E4%BD%BF%E7%94%A8/" rel="bookmark" title="Java学习建议">Java学习建议</a></li><li><a href="/2022/08/29/%E4%BA%BA%E7%B1%BB%E7%BE%A4%E6%98%9F%E9%97%AA%E8%80%80%E4%B9%8B%E6%97%B6/" rel="bookmark" title="类人群星闪耀之时 [合订本 不定期整理]">类人群星闪耀之时 [合订本 不定期整理]</a></li><li class="active"><a href="/2022/08/29/%E9%83%A8%E7%BD%B2Rocket.Chat%20Server%E6%B5%81%E7%A8%8B/" rel="bookmark" title="Java学习建议">Java学习建议</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Aki-Polaris"
+      data-src="/images/avatar.png">
+  <p class="name" itemprop="name">Aki-Polaris</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">7</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">6</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">3</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <a href="https://github.com/murphys7017" title="https:&#x2F;&#x2F;github.com&#x2F;murphys7017" class="item github"><i class="ic i-github"></i></a>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95ZS1iYWktODEtMjQ=" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;ye-bai-81-24"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTU1MTExODgzMA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;551118830"><i class="ic i-cloud-music"></i></span>
+      <a href="/Yuki7017@outlook.com" title="Yuki7017@outlook.com" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item gitee" data-url="aHR0cHM6Ly9naXRlZS5jb20vb2N0b2Jlcl9Xcg==" title="https:&#x2F;&#x2F;gitee.com&#x2F;october_Wr"><i class="ic i-github"></i></span>
+      <span class="exturl item bilibili" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vNDE3NjEzMjk/c3BtX2lkX2Zyb209MzMzLjEwMDcuMC4w" title="https:&#x2F;&#x2F;space.bilibili.com&#x2F;41761329?spm_id_from&#x3D;333.1007.0.0"><i class="ic i-youtube"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/note/" title="分类于 杂谈">杂谈</a>
+</div>
+
+    <span><a href="/2022/08/29/win%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96/" title="Windows10&amp;11 美化">Windows10&11 美化</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/note/" title="分类于 杂谈">杂谈</a>
+</div>
+
+    <span><a href="/2022/08/29/SVN%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E4%BD%BF%E7%94%A8/" title="Java学习建议">Java学习建议</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/%E6%95%99%E7%A8%8B/" title="分类于 教程">教程</a>
+</div>
+
+    <span><a href="/2022/08/29/%E5%92%8C%E9%A3%8Eapi%E7%9A%84%E4%BD%BF%E7%94%A8/" title="风天气api的使用">风天气api的使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/note/" title="分类于 杂谈">杂谈</a>
+</div>
+
+    <span><a href="/2022/08/29/%E4%BA%BA%E7%B1%BB%E7%BE%A4%E6%98%9F%E9%97%AA%E8%80%80%E4%B9%8B%E6%97%B6/" title="类人群星闪耀之时 [合订本 不定期整理]">类人群星闪耀之时 [合订本 不定期整理]</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/note/" title="分类于 杂谈">杂谈</a>
+</div>
+
+    <span><a href="/2022/08/29/%E9%83%A8%E7%BD%B2Rocket.Chat%20Server%E6%B5%81%E7%A8%8B/" title="Java学习建议">Java学习建议</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/java/note/" title="分类于 杂谈">杂谈</a>
+</div>
+
+    <span><a href="/2022/08/29/Java%E5%AD%A6%E4%B9%A0%E5%BB%BA%E8%AE%AE/" title="Java学习建议">Java学习建议</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blrj/" title="分类于 摆烂日记">摆烂日记</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/blrj/python/" title="分类于 Python">Python</a>
+</div>
+
+    <span><a href="/2022/08/29/%E5%88%9D%E4%BB%A3QQ%E8%81%8A%E5%A4%A9%E6%9C%BA%E5%99%A8%E4%BA%BA/" title="Alice酱初代QQ聊天机器人，对进击的Yes酱的亿点小扩展">Alice酱初代QQ聊天机器人，对进击的Yes酱的亿点小扩展</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2022</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Aki-Polaris @ Aki Polaris</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<a href="https://github.com/amehime/hexo-theme-shoka">Shoka</a>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2022/08/29/部署Rocket.Chat Server流程/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
